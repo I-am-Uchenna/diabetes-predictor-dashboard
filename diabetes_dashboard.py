@@ -92,8 +92,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 models = {
     "Linear Regression": LinearRegression(),
     "AdaBoost": AdaBoostClassifier(DecisionTreeClassifier(), n_estimators=100),
-    "Bagging (DT)": BaggingClassifier(base_estimator=DecisionTreeClassifier()),
-    "Bagging (KNN)": BaggingClassifier(base_estimator=KNeighborsClassifier()),
+    "Bagging (DT)": BaggingClassifier(estimator=DecisionTreeClassifier()),
+    "Bagging (KNN)": BaggingClassifier(estimator=KNeighborsClassifier()),
     "MLP Neural Net": MLPClassifier(hidden_layer_sizes=(100, 50), max_iter=300)
 }
 
