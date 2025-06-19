@@ -110,13 +110,13 @@ st.bar_chart(result_df.set_index("Model"))
 st.subheader("🔍 Predict Your Diabetes Risk")
 
 input_data = {
-    'Gender': st.selectbox("Gender", [1, 2]),
-    'Years_in_US': st.slider("Years in US", 0, 80, 10),
-    'Family_income': st.slider("Family Income Ratio", 0.0, 5.0, 2.5),
-    'ArmCircum': st.slider("Arm Circumference", 15.0, 50.0, 30.0),
-    'SaggitalAbdominal': st.slider("Sagittal Abdominal", 10.0, 50.0, 25.0),
-    'GripStrength': st.slider("Grip Strength", 10.0, 100.0, 50.0),
-    'Breast_fed': st.selectbox("Breastfed as Baby?", [0, 1])
+    'Gender': st.selectbox("Gender (1 = Male, 2 = Female)", [1, 2], help="Choose the gender: 1 for Male, 2 for Female"),
+    'Years_in_US': st.slider("Years lived in the US", 0, 80, 10, help="Number of years the person has lived in the United States"),
+    'Family_income': st.slider("Family Income Ratio", 0.0, 5.0, 2.5, help="Income-to-poverty ratio (higher = higher income)"),
+    'ArmCircum': st.slider("Arm Circumference (cm)", 15.0, 50.0, 30.0, help="Measurement around the upper arm in centimeters"),
+    'SaggitalAbdominal': st.slider("Sagittal Abdominal Diameter (cm)", 10.0, 50.0, 25.0, help="Abdominal height while lying down"),
+    'GripStrength': st.slider("Grip Strength (kg)", 10.0, 100.0, 50.0, help="Hand grip strength in kilograms"),
+    'Breast_fed': st.selectbox("Were you breastfed as a baby? (1 = Yes, 0 = No)", [1, 0], help="1 means Yes, 0 means No")
 }
 
 user_input = pd.DataFrame([input_data])
