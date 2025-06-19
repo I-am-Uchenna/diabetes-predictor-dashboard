@@ -134,10 +134,10 @@ These categories are based on Glycohemoglobin (HbA1c) levels.
 
 ## 💡 Credits
 
-Built by [Uchenna Ejike] using open NHANES data, Streamlit, and Scikit-Learn.
+Built by Uchenna Ejike using open NHANES data, Streamlit, and Scikit-Learn.
 
 ---
 
 ## 🌐 Live Demo
 
-> Live via [Streamlit Cloud](https://streamlit.io/cloud)
+> Live via [Streamlit Cloud](https://diabetes-predictor-dashboard.streamlit.app/)
